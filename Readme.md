@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Fidan Hajiyeva](https://up.htmlacademy.ru/htmlcss/28/user/1482853).
-* Наставник: `Неизвестно`.
+* Наставник: [Вадим Новаш](https://up.htmlacademy.ru/htmlcss/28/user/8589).
 
 ---
 
