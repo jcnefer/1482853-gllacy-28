@@ -16,7 +16,7 @@
 
     <nav class="nav">
       <ul class="nav__list list-reset">
-        <li class="nav__item"><a href="#" aria-haspopup="true">Каталог</a>
+        <li class="nav__item"><a class="nav__link" href="#" aria-haspopup="true">Каталог</a>
           <ul class="nav__submenu dropdown list-reset" aria-label="Подменю">
             <li class="nav__submenu-item"><a class="new" href="#"><b>Новинки</b></a></li>
             <li class="nav__submenu-item"><a href="catalog.html">Сливочное</a></li>
@@ -25,22 +25,26 @@
             <li class="nav__submenu-item"><a href="#">Мелорин</a></li>
           </ul>
         </li>
-        <li class="nav__item"><a href="#">Доставка и оплата</a></li>
-        <li class="nav__item"><a href="#">О компании</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Доставка и оплата</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
       </ul>
     </nav>
 
     <div class="header-user">
-      <!-- Можно ли скрыть часть формы (aria-label, aria-haspopup) -->
 
-      <form class="search" role="search" action="https://echo.htmlacademy.ru" method="GET">
-        <label for="search-field">Поиск</label>
-        <input class="search__input" type="search" name="search" id="search-field" placeholder="Крем-брюле">
-        <button class="search__btn" type="submit">Найти</button>
-      </form>
+      <div class="search">
+        <button class="search__btn" type="button" aria-label="Поиск" aria-haspopup="true">search-svg</button>
+
+        <form class="search__form" role="search" action="https://echo.htmlacademy.ru" method="GET">
+          <label for="search-field">Поиск</label>
+          <input class="search__input" type="search" name="search" id="search-field" placeholder="Крем-брюле">
+          <button class="search__submit" type="submit">Найти</button>
+        </form>
+      </div>
 
       <ul class="header-user__list list-reset">
-        <li class="header-user__item"><a href="#" aria-label="Войти в свой аккаунт" aria-haspopup="true">Вход</a>
+        <li class="header-user__item"><a class="header-user__link" href="#" aria-label="Войти в свой аккаунт"
+            aria-haspopup="true">Вход</a>
           <form class="signin" action="https://echo.htmlacademy.ru" method="POST">
             <p>
               <label for="email-field">E-mail</label>
