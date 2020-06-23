@@ -16,7 +16,7 @@
 
     <nav class="nav">
       <ul class="nav__list list-reset">
-        <li class="nav__item"><a class="nav__link" href="#" aria-haspopup="true">Каталог</a>
+        <li class="nav__item nav__item--catalog"><a class="nav__link" href="#" aria-haspopup="true">Каталог</a>
           <ul class="nav__submenu dropdown list-reset" aria-label="Подменю">
             <li class="nav__submenu-item"><a class="new" href="#"><b>Новинки</b></a></li>
             <li class="nav__submenu-item"><a href="catalog.html">Сливочное</a></li>
@@ -64,7 +64,8 @@
       </ul>
 
       <div class="cart">
-        <a class="cart__info" href="#"><span>Корзина: </span>Пусто</a>
+        <a class="cart__info" href="#"><span class="visually-hidden">Корзина: </span><output
+            class="cart__status">Пусто</output></a>
       </div>
     </div>
 
@@ -123,7 +124,7 @@
     <section class="promo">
       <h2 class="visually-hidden">Промоакции</h2>
 
-      <section class="promo__raspberry">
+      <section class="promo__item promo__item--raspberry">
         <h3 class="promo__title">Малинка даром!</h3>
         <p class="promo__txt">
           При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
@@ -132,7 +133,7 @@
         <a class="promo__link like-btn" href="#" aria-label="Выбрать акцию с вареньем">Хoчу варенье!</a>
       </section>
 
-      <section class="promo__chocolate">
+      <section class="promo__item promo__item--chocolate">
         <h3 class="promo__title">Шоколадки даром!</h3>
         <p class="promo__txt">
           При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
@@ -203,22 +204,22 @@
       </p>
 
       <ul class="strengths__list list-reset">
-        <li class="strengths__item">
+        <li class="strengths__item strengths__item--handmade">
           Все наше мороженое изготавливается на собственном производстве, с
           использованием современного оборудования и проверенных временем
           технологий.
         </li>
-        <li class="strengths__item">
+        <li class="strengths__item strengths__item--eco">
           Для приготовления мороженого используются настоящие сливки и молоко
           высочайшего качества. Все дополнительные ингредиенты и добавки
           произведены из натурального, экологически чистого сырья.
         </li>
-        <li class="strengths__item">
+        <li class="strengths__item strengths__item--farm">
           Закупка ингредиентов производится только у проверенных фермерских
           хозяйств и компаний, с которыми нас связывает долговременное
           сотрудничество.
         </li>
-        <li class="strengths__item">
+        <li class="strengths__item strengths__item--termopack">
           Доставка нашего мороженного до заказчиков осуществляется в
           специальном термопаке, который не дает мороженому растаять в пути и
           позволяет сохранить превосходный вкус.
@@ -279,10 +280,13 @@
   <footer class="page-footer">
 
     <ul class="social social__list list-reset">
-      <li class="social__item"><a href="#" aria-label="В фейсбук">Facebook</a></li>
-      <li class="social__item"><a href="#" aria-label="Вконтакте">VK</a></li>
-      <li class="social__item"><a href="#" aria-label="В Инстаграм">Instagram</a></li>
-      <li class="social__item"><a href="#" aria-label="В Твиттер">Twitter</a></li>
+      <li class="social__item"><a class="social__link social__link--fb" href="#" aria-label="В фейсбук">Facebook</a>
+      </li>
+      <li class="social__item"><a class="social__link social__link--vk" href="#" aria-label="Вконтакте">Vk</a></li>
+      <li class="social__item"><a class="social__link social__link--insta" href="#"
+          aria-label="В Инстаграм">Instagram</a></li>
+      <li class="social__item"><a class="social__link social__link--twitter" href="#" aria-label="В Твиттер">Twitter</a>
+      </li>
     </ul>
 
     <ul class="footer-nav footer-nav__list list-reset">
@@ -312,7 +316,7 @@
     <h2 class="visually-hidden">Форма обратной связи</h2>
 
     <p class="modal__title">Мы обязательно вам ответим!</p>
-    <button class="modal__close" type="button" aria-label="Закрыть окно"></button>
+    <button class="modal__close" type="button" aria-label="Закрыть окно">X</button>
 
     <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
       <p class="feedback__name">

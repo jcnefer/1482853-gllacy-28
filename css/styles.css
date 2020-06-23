@@ -150,8 +150,7 @@ input[type="radio"].visually-hidden {
 	font-weight: 700;
 	line-height: 19px;
 
-	display: inline-block;
-	vertical-align: middle;
+	display: inline-flex;
 
 	border-bottom: 1px solid var(--white-alpha-2);
 }
@@ -281,8 +280,7 @@ input[type="radio"].visually-hidden {
 
 	color: var(--basic-almost-black);
 
-	display: inline-block;
-	vertical-align: middle;
+	display: inline-flex;
 
 	border-bottom: 1px solid var(--grey-alpha-3);
 }
@@ -308,17 +306,17 @@ input[type="radio"].visually-hidden {
 	padding-right: 26px;
 }
 
-.cart__table {
+.cart__table-wrapper {
 	color: var(--basic-almost-black);
 	font-size: 13px;
 	line-height: 16px;
 }
 
-.cart__table-cell--amount {
+.cart__amount {
 	color: var(--basic-black);
 }
 
-.cart__table-cell--price {
+.cart__price {
 	color: var(--basic-grey-lighter);
 }
 
@@ -373,14 +371,14 @@ input[type="radio"].visually-hidden {
 
 /* Промоакции */
 
-.promo__raspberry {
+.promo__item--raspberry {
 	background-color: var(--bg-raspberry);
 	background-image: url("../img/raspberry.jpg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
 
-.promo__chocolate {
+.promo__item--chocolate {
 	background-color: var(--bg-chocolate);
 	background-image: url("../img/chocolate.jpg");
 	background-repeat: no-repeat;
@@ -581,8 +579,7 @@ input[type="radio"].visually-hidden {
 	font-size: 13px;
 	line-height: 16px;
 
-	display: inline-block;
-	vertical-align: middle;
+	display: inline-flex;
 
 	border-bottom: 1px solid var(--white-alpha-2);
 }

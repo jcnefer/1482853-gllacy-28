@@ -17,9 +17,10 @@
 
     <nav class="nav">
       <ul class="nav__list list-reset">
-        <li class="nav__item"><a class="nav__link nav__link--current" href="#" aria-haspopup="true">Каталог</a>
+        <li class="nav__item nav__item--catalog"><a class="nav__link nav__link--current" href="#"
+            aria-haspopup="true">Каталог</a>
           <ul class="nav__submenu dropdown list-reset" aria-label="Подменю">
-            <li class="nav__submenu-item"><a href="#"><b>Новинки</b></a></li>
+            <li class="nav__submenu-item"><a class="new" href="#"><b>Новинки</b></a></li>
             <li class="nav__submenu-item"><a>Сливочное</a></li>
             <li class="nav__submenu-item"><a href="#">Щербеты</a></li>
             <li class="nav__submenu-item"><a href="#">Фруктовый лед</a></li>
@@ -65,38 +66,49 @@
       </ul>
 
       <div class="cart">
-        <a class="cart__info" href="#" aria-haspopup="true"><span>Корзина: </span>2 товара</a>
+        <a class="cart__info" href="#" aria-haspopup="true"><span class="visually-hidden">Корзина: </span
+            class="cart__status"><output>2 товара</output></a>
 
         <div class="cart__table-wrapper">
           <table class="cart__table">
             <tr class="cart__table-row">
-              <!-- кнопка или ссылка? -->
               <td class="cart__table-cell"><button class="cart__table-btn" type="button"><span>Удалить из
                     корзины</span></button></td>
-              <td class="cart__table-cell"><img class="cart__table-img" src="img/product-1.png" width="33" height="33"
-                  alt="Пломбир с апельсиновым джемом" aria-hidden="true"></td>
+              <td class="cart__table-cell">
+                <div class="cart__img-wrapper">
+                  <img class="cart__table-img" src="img/product-1.png" width="33" height="33"
+                    alt="Пломбир с апельсиновым джемом" aria-hidden="true">
+                </div>
+              </td>
               <td class="cart__table-cell">Пломбир с апельсиновым джемом</td>
-              <td class="cart__table-cell cart__table-cell--amount">1,5 кг</td>
-              <td class="cart__table-cell">х</td>
-              <td class="cart__table-cell cart__table-cell--price">200 руб.</td>
-              <td class="cart__table-cell">300 руб.</td>
+              <td class="cart__table-cell">
+                <p>
+                  <span class="cart__amount">1,5 кг</span> х <span class="cart__price">200 руб.</span><span
+                    class="cart__total-price">300 руб.</span>
+                </p>
+              </td>
             </tr>
             <tr class="cart__table-row">
               <td class="cart__table-cell"><button class="cart__table-btn" type="button"><span>Удалить из
                     корзины</span></button></td>
-              <td class="cart__table-cell"><img class="cart__table-img" src="img/product-3.png" width="33" height="33"
-                  alt="Клубничный пломбир с присыпкой из белого шоколада" aria-hidden="true"></td>
+              <td class="cart__table-cell">
+                <div class="cart__img-wrapper">
+                  <img class="cart__table-img" src="img/product-3.png" width="33" height="33"
+                    alt="Клубничный пломбир с присыпкой из белого шоколада" aria-hidden="true">
+                </div>
+              </td>
               <td class="cart__table-cell">Клубничный пломбир с присыпкой из белого шоколада</td>
-              <td class="cart__table-cell cart__table-cell--amount">1,5 кг</td>
-              <td class="cart__table-cell">х</td>
-              <td class="cart__table-cell cart__table-cell--price">300 руб.</td>
-              <td class="cart__table-cell">450 руб.</td>
-            </tr>
-            <tr class="cart__total">
-              <td colspan="6">Итого:</td>
-              <td>750 руб.</td>
+              <td class="cart__table-cell cart__table-cell--amount">
+                <p>
+                  <span class="cart__amount">1,5 кг</span> х <span class="cart__price">300 руб.</span><span
+                    class="cart__total-price">450 руб.</span>
+                </p>
+              </td>
             </tr>
           </table>
+          <p class="cart__total">Итого:
+            <output>750 руб.</output>
+          </p>
 
           <a class="cart__link like-btn" href="#">Оформить заказ</a>
         </div>
@@ -365,10 +377,13 @@
   <footer class="page-footer">
 
     <ul class="social social__list list-reset">
-      <li class="social__item"><a href="#" aria-label="В фейсбук">Facebook</a></li>
-      <li class="social__item"><a href="#" aria-label="Вконтакте">VK</a></li>
-      <li class="social__item"><a href="#" aria-label="В Инстаграм">Instagram</a></li>
-      <li class="social__item"><a href="#" aria-label="В Твиттер">Twitter</a></li>
+      <li class="social__item"><a class="social__link social__link--fb" href="#" aria-label="В фейсбук">Facebook</a>
+      </li>
+      <li class="social__item"><a class="social__link social__link--vk" href="#" aria-label="Вконтакте">Vk</a></li>
+      <li class="social__item"><a class="social__link social__link--insta" href="#"
+          aria-label="В Инстаграм">Instagram</a></li>
+      <li class="social__item"><a class="social__link social__link--twitter" href="#" aria-label="В Твиттер">Twitter</a>
+      </li>
     </ul>
 
     <ul class="footer-nav footer-nav__list list-reset">
