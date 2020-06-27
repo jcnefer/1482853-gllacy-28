@@ -37,7 +37,12 @@
         <div class="header-user">
 
           <div class="search">
-            <button class="search__btn" type="button" aria-label="Поиск" aria-haspopup="true">search-svg</button>
+            <button class="header-user__link search__btn" type="button" aria-label="Поиск" aria-haspopup="true">
+              <svg class="header-user__svg search__btn-svg" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z" />
+              </svg>
+            </button>
 
             <form class="search__form" role="search" action="https://echo.htmlacademy.ru" method="GET">
               <label for="search-field">Поиск</label>
@@ -47,8 +52,14 @@
           </div>
 
           <ul class="header-user__list list-reset">
-            <li class="header-user__item"><a class="header-user__link" href="#" aria-label="Войти в свой аккаунт"
-                aria-haspopup="true">Вход</a>
+            <li class="header-user__item"><a class="header-user__link header-user__link--login" href="#"
+                aria-label="Войти в свой аккаунт" aria-haspopup="true">
+                <svg class="header-user__svg header-user__svg--login" width="20" height="19"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.04 14.88l6.92-5.38-6.92-5.37v2.91H0v4.92h6.04v2.92z" />
+                  <path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2a2 2 0 002 2h13a2 2 0 002-2V2a2 2 0 00-2-2z" />
+                </svg>
+                <span>Вход</span></a>
               <form class="signin" action="https://echo.htmlacademy.ru" method="POST">
                 <p>
                   <label for="email-field">E-mail</label>
@@ -69,8 +80,15 @@
           </ul>
 
           <div class="cart">
-            <a class="cart__info" href="#" aria-haspopup="true"><span class="visually-hidden">Корзина: </span
-                class="cart__status"><output>2 товара</output></a>
+            <a class="header-user__link cart__info cart__info--full" href="#" aria-haspopup="true"><span
+                class="visually-hidden">Корзина:
+              </span>
+              <svg class="header-user__svg cart__svg" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path class="cart__svg--outline"
+                  d="M7.034 20a2.008 2.008 0 002.015-2c0-1.105-.902-2-2.015-2a2.008 2.008 0 00-2.016 2c0 1.105.903 2 2.016 2zM16.103 20a2.008 2.008 0 002.015-2c0-1.105-.902-2-2.015-2a2.008 2.008 0 00-2.016 2c0 1.105.903 2 2.016 2zM5.703 2l-.241-2H0v2h3.668l1.511 13h14.108L21 2H5.703zm11.8 11H6.973L5.965 4h12.727l-1.189 9z" />
+                <path class="cart__svg--fill" d="M5.935 4.03L6.973 13h10.53l1.19-8.97H5.934z" />
+              </svg>
+              <output class="cart__status">2 товара</output></a>
 
             <div class="cart__table-wrapper">
               <table class="cart__table">
@@ -115,7 +133,6 @@
 
               <a class="cart__link like-btn" href="#">Оформить заказ</a>
             </div>
-
           </div>
         </div>
       </div>
@@ -153,6 +170,9 @@
               <option class="filter__option" value="firt-higher">сначала дорогие</option>
               <option class="filter__option" value="by-fat-amount">по жирности</option>
             </select>
+            <svg class="filter__sort-svg" width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0H11" />
+            </svg>
           </fieldset>
 
           <fieldset class="filter__price">
@@ -161,7 +181,6 @@
             <div class="filter__price-info">
               <input class="filter__num" type="number" name="min-price" value="100" id="min-input">
               <label class="filter__label" for="min-input">₽</label>
-              <!-- не уверена -->
               <span> – </span>
               <input class="filter__num" type="number" name="max-price" value="500" id="max-input">
               <label class="filter__label" for="max-input">₽</label>
@@ -171,8 +190,8 @@
               <div class="filter__scale">
                 <div class="filter__bar"></div>
               </div>
-              <button class="filter__toggle-btn" type="button"></button>
-              <button class="filter__toggle-btn" type="button"></button>
+              <button class="filter__toggle-btn filter__toggle-btn--min" type="button"></button>
+              <button class="filter__toggle-btn filter__toggle-btn--max" type="button"></button>
             </div>
           </fieldset>
 
@@ -181,20 +200,23 @@
 
             <ul class="filter__list list-reset">
               <li class="filter__item">
-                <input class="filter__radio" type="radio" name="fat-amount" id="zero" value="zero">
+                <input class="filter__radio visually-hidden" type="radio" name="fat-amount" id="zero" value="zero">
                 <label for="zero">0%</label>
               </li>
               <li class="filter__item">
-                <input class="filter__radio" type="radio" name="fat-amount" id="max-ten" value="max-ten" checked>
+                <input class="filter__radio visually-hidden" type="radio" name="fat-amount" id="max-ten" value="max-ten"
+                  checked>
                 <label for="max-ten">до 10%</label>
               </li>
               <li class="filter__item">
-                <input class="filter__radio" type="radio" name="fat-amount" id="max-thirty" value="max-thirty">
+                <input class="filter__radio visually-hidden" type="radio" name="fat-amount" id="max-thirty"
+                  value="max-thirty">
                 <label for="max-thirty">до 30%</label>
               </li>
               <li class="filter__item">
-                <input class="filter__radio" type="radio" name="fat-amount" id="up-thirty" value="up-thirty">
-                <label for="thirty-up">выше 30%</label>
+                <input class="filter__radio visually-hidden" type="radio" name="fat-amount" id="up-thirty"
+                  value="up-thirty">
+                <label for="up-thirty">выше 30%</label>
               </li>
             </ul>
           </fieldset>
@@ -204,23 +226,25 @@
 
             <ul class="filter__list list-reset">
               <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="chocolate" id="chocolate-field" checked>
+                <input class="filter__checkbox visually-hidden" type="checkbox" name="chocolate" id="chocolate-field"
+                  checked>
                 <label class="filter__label" for="chocolate-field">шоколадные</label>
               </li>
               <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="sprinkles" id="sprinkles-field" checked>
+                <input class="filter__checkbox visually-hidden" type="checkbox" name="sprinkles" id="sprinkles-field"
+                  checked>
                 <label class="filter__label" for="sprinkles-field">сахарные присыпки</label>
               </li>
               <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="fruit" id="fruit-field">
+                <input class="filter__checkbox visually-hidden" type="checkbox" name="fruit" id="fruit-field">
                 <label class="filter__label" for="fruit-field">фрукты</label>
               </li>
               <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="syrup" id="syrup-field">
+                <input class="filter__checkbox visually-hidden" type="checkbox" name="syrup" id="syrup-field">
                 <label class="filter__label" for="syrup-field">сиропы</label>
               </li>
               <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="jam" id="jam-field">
+                <input class="filter__checkbox visually-hidden" type="checkbox" name="jam" id="jam-field">
                 <label class="filter__label" for="jam-field">джемы</label>
               </li>
             </ul>
@@ -391,13 +415,15 @@
     <div class="container">
 
       <ul class="social social__list list-reset">
-        <li class="social__item"><a class="social__link social__link--fb" href="#" aria-label="В фейсбук">Facebook</a>
+        <li class="social__item"><a class="social__link social__link--fb" href="#"><span
+              class="visually-hidden">Facebook</span></a>
         </li>
-        <li class="social__item"><a class="social__link social__link--vk" href="#" aria-label="Вконтакте">Vk</a></li>
-        <li class="social__item"><a class="social__link social__link--insta" href="#"
-            aria-label="В Инстаграм">Instagram</a></li>
-        <li class="social__item"><a class="social__link social__link--twitter" href="#"
-            aria-label="В Твиттер">Twitter</a>
+        <li class="social__item"><a class="social__link social__link--vk" href="#"><span
+              class="visually-hidden">Vk</span></a></li>
+        <li class="social__item"><a class="social__link social__link--insta" href="#"><span
+              class="visually-hidden">Instagram</span></a></li>
+        <li class="social__item"><a class="social__link social__link--twitter" href="#"><span
+              class="visually-hidden">Twitter</span></a>
         </li>
       </ul>
 
