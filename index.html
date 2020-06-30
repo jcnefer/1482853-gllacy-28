@@ -44,9 +44,9 @@
             </button>
 
             <form class="search__form" role="search" action="https://echo.htmlacademy.ru" method="GET">
-              <label for="search-field">Поиск</label>
+              <label class="visually-hidden" for="search-field">Поиск</label>
               <input class="search__input" type="search" name="search" id="search-field" placeholder="Крем-брюле">
-              <button class="search__submit" type="submit">Найти</button>
+              <button class="visually-hidden" type="submit">Найти</button>
             </form>
           </div>
 
@@ -61,19 +61,24 @@
                 <span>Вход</span></a>
               <form class="signin" action="https://echo.htmlacademy.ru" method="POST">
                 <p>
-                  <label for="email-field">E-mail</label>
+                  <label class="visually-hidden" for="email-field">E-mail</label>
                   <input class="signin__input" type="email" name="email" id="email-field"
                     placeholder="email@example.com">
                 </p>
                 <p>
-                  <label for="password-field">Password</label>
+                  <label class="visually-hidden" for="password-field">Password</label>
                   <input class="signin__input" type="password" name="password" id="password-field" placeholder="••••••">
                 </p>
-                <div class="signin__link-wrapper">
-                  <a class="signin__link" href="#">Забыли пароль?</a>
-                  <a class="signin__link" href="#">Новая регистрация</a>
+
+                <div class="signin__links-button">
+                  <div class="signin__link-wrapper">
+                    <a class="signin__link" href="#">Забыли пароль?</a>
+                    <a class="signin__link" href="#">Новая регистрация</a>
+                  </div>
+
+                  <button class="signin__btn like-btn" type="submit">Войти</button>
                 </div>
-                <button class="signin__btn like-btn" type="submit">Войти</button>
+
               </form>
             </li>
           </ul>
@@ -175,48 +180,70 @@
 
         <ul class="hits__list list-reset">
           <li class="hits__item hits__item--hit">
-            <div class="hits__img-wrapper">
-              <img src="img/product-1.png" width="267" height="267"
-                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" aria-hidden="true">
+            <div class="hits__item-wrapper">
+              <div class="hits__img-wrapper">
+                <img src="img/product-1.png" width="267" height="267"
+                  alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" aria-hidden="true">
+              </div>
+              <a href="#">
+                <h3 class="hits__title"><span>Сливочное с&nbsp;апельсиновым джемом и&nbsp;цитрусовой стружкой</span>
+                </h3>
+              </a>
+              <p class="hits__price">310 ₽<span>/кг</span></p>
             </div>
-
-            <h3 class="hits__title"><span>Сливочное с&nbsp;апельсиновым джемом и&nbsp;цитрусовой стружкой</span></h3>
-            <p class="hits__price">310 ₽<span>/кг</span></p>
-            <a class="hits__link like-btn" href="#" aria-label="Перейти на детальную страницу">Быстрый просмотр</a>
+            <div class="hits__btn-wrapper">
+              <a class="hits__link like-btn" href="#" aria-label="Перейти на детальную страницу">Быстрый просмотр</a>
+            </div>
           </li>
 
           <li class="hits__item hits__item--hit">
-            <div class="hits__img-wrapper">
-              <img src="img/product-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"
-                aria-hidden="true">
+            <div class="hits__item-wrapper">
+              <div class="hits__img-wrapper">
+                <img src="img/product-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"
+                  aria-hidden="true">
+              </div>
+
+              <a href="#">
+                <h3 class="hits__title"><span>Сливочно-кофейное с&nbsp;кусочками шоколада</span></h3>
+              </a>
+              <p class="hits__price">380 ₽<span>/кг</span></p>
             </div>
-
-            <h3 class="hits__title"><span>Сливочно-кофейное с&nbsp;кусочками шоколада</span></h3>
-            <p class="hits__price">380 ₽<span>/кг</span></p>
-            <a class="hits__link like-btn" href="#" aria-label="Перейти на детальную страницу">Быстрый просмотр</a>
-
+            <div class="hits__btn-wrapper">
+              <a class="hits__link like-btn" href="#" aria-label="Перейти на детальную страницу">Быстрый просмотр</a>
+            </div>
           </li>
 
           <li class="hits__item hits__item--hit">
-            <div class="hits__img-wrapper">
-              <img src="img/product-3.png" width="267" height="267"
-                alt="Сливочно-клубничное с присыпкой из белого шоколада" aria-hidden="true">
-            </div>
+            <div class="hits__item-wrapper">
+              <div class="hits__img-wrapper">
+                <img src="img/product-3.png" width="267" height="267"
+                  alt="Сливочно-клубничное с присыпкой из белого шоколада" aria-hidden="true">
+              </div>
 
-            <h3 class="hits__title"><span>Сливочно-клубничное с&nbsp;присыпкой из&nbsp;белого шоколада</span></h3>
-            <p class="hits__price">355 ₽<span>/кг</span></p>
-            <a class="hits__link like-btn" href="#" aria-label="Перейти на детальную страницу">Быстрый просмотр</a>
+              <a href="#">
+                <h3 class="hits__title"><span>Сливочно-клубничное с&nbsp;присыпкой из&nbsp;белого шоколада</span></h3>
+              </a>
+              <p class="hits__price">355 ₽<span>/кг</span></p>
+            </div>
+            <div class="hits__btn-wrapper">
+              <a class="hits__link like-btn" href="#" aria-label="Перейти на детальную страницу">Быстрый просмотр</a>
+            </div>
           </li>
 
           <li class="hits__item hits__item--hit">
-            <div class="hits__img-wrapper">
-              <img src="img/product-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"
-                aria-hidden="true">
+            <div class="hits__item-wrapper">
+              <div class="hits__img-wrapper">
+                <img src="img/product-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"
+                  aria-hidden="true">
+              </div>
+              <a href="#">
+                <h3 class="hits__title"><span>Сливочное крем-брюле с&nbsp;карамельной подливкой</span></h3>
+              </a>
+              <p class="hits__price">415 ₽<span>/кг</span></p>
             </div>
-
-            <h3 class="hits__title"><span>Сливочное крем-брюле с&nbsp;карамельной подливкой</span></h3>
-            <p class="hits__price">415 ₽<span>/кг</span></p>
-            <a class="hits__link like-btn" href="#" aria-label="Перейти на детальную страницу">Быстрый просмотр</a>
+            <div class="hits__btn-wrapper">
+              <a class="hits__link like-btn" href="#" aria-label="Перейти на детальную страницу">Быстрый просмотр</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -357,23 +384,25 @@
   <section class="modal feedback">
     <h2 class="visually-hidden">Форма обратной связи</h2>
 
-    <p class="modal__title">Мы обязательно вам ответим!</p>
-    <button class="modal__close" type="button" aria-label="Закрыть окно">X</button>
+    <div class="modal__top-row">
+      <p class="modal__title">Мы обязательно вам ответим!</p>
+      <button class="modal__close" type="button" aria-label="Закрыть окно"></button>
+    </div>
 
     <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
       <p class="feedback__name">
-        <label for="name-field">Ваше имя:</label>
+        <label class="visually-hidden" for="name-field">Ваше имя:</label>
         <input class="feedback__input form-input" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
       </p>
 
       <p class="feedback__email">
-        <label for="email-field">Ваш e-mail:</label>
+        <label class="visually-hidden" for="email-field">Ваш e-mail:</label>
         <input class="feedback__input form-input" type="email" name="email" id="email-field"
           placeholder="email@example.com">
       </p>
 
       <p class="feedback__letter">
-        <label for="letter-field">Текст письма:</label>
+        <label class="visually-hidden" for="letter-field">Текст письма:</label>
         <textarea class="feedback__textarea form-input" name="letter" id="letter-field" placeholder="В свободной форме"
           cols="50" rows="7"></textarea>
       </p>
