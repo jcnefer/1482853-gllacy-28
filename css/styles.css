@@ -97,15 +97,15 @@ body {
 	margin: 0;
 }
 
-.bg-green {
+.page[data-index='0'] {
 	background-color: var(--bg-green);
 }
 
-.bg-blue {
+.page[data-index='1'] {
 	background-color: var(--bg-blue);
 }
 
-.bg-brown {
+.page[data-index='2'] {
 	background-color: var(--bg-brown);
 }
 
@@ -761,6 +761,8 @@ html {
 	border-radius: 50%;
 	padding: 0;
 	margin-right: 4px;
+
+	cursor: pointer;
 }
 
 .slider__controls-btn.slider__controls-btn--active {
@@ -768,7 +770,6 @@ html {
 }
 
 .slider__item {
-	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
@@ -776,8 +777,12 @@ html {
 	min-height: 483px;
 }
 
-.slider__item:not(:first-child) {
+.slider__item {
 	display: none;
+}
+
+.slider__item--active {
+	display: flex;
 }
 
 .slider__img-wrapper {
@@ -1475,6 +1480,15 @@ html {
 	display: none;
 }
 
+.modal-show {
+	display: block;
+	animation: bounce 0.6s;
+}
+
+.modal-error {
+	animation: shake 0.6s;
+}
+
 .feedback {
 	background-color: var(--special-ivory);
 	color: var(--basic-almost-black);
@@ -1512,6 +1526,8 @@ html {
 	height: 17px;
 	border: 0;
 	padding: 0;
+
+	cursor: pointer;
 }
 
 .feedback__form {
@@ -1619,10 +1635,6 @@ html {
 	align-items: center;
 }
 
-/* .breadcrumbs__item:not(:first-child) {
-	padding-left: 15px;
-} */
-
 .breadcrumbs__item a {
 	font-size: 14px;
 	line-height: 16px;
@@ -1701,8 +1713,8 @@ html {
 
 .filter__form label {
 	position: relative;
-
 	display: inline-flex;
+	cursor: pointer;
 }
 
 .filter__sort-svg {
@@ -1711,6 +1723,9 @@ html {
 	position: absolute;
 	top: 14px;
 	right: 14px;
+	z-index: -1;
+
+	cursor: pointer;
 }
 
 .filter__select {
@@ -1744,6 +1759,7 @@ html {
 
 .filter__select:focus + .filter__sort-svg {
 	fill: var(--basic-almost-black);
+	z-index: 0;
 }
 
 .filter__option {
@@ -1963,6 +1979,8 @@ html {
 	padding-right: 27px;
 	margin-bottom: 13px;
 	margin-right: 16px;
+
+	cursor: pointer;
 }
 
 .filter__submit:hover,
@@ -2151,4 +2169,41 @@ html {
 .pagination__link:not([href]) {
 	background-color: var(--basic-white);
 	color: var(--basic-almost-black);
+}
+
+/* Анимации  */
+
+@keyframes bounce {
+	0% {
+		transform: translateY(-2000px);
+	}
+	70% {
+		transform: translateY(30px);
+	}
+	90% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translateX(-10px);
+	}
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translateX(10px);
+	}
 }
