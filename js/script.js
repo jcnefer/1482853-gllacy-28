@@ -92,3 +92,30 @@ sliderControls.forEach((btn) => {
 		pageMain.dataset.index = sliderControlsArr.indexOf(this);
 	});
 });
+
+// Map
+
+ymaps.ready(init);
+function init() {
+	var myMap = new ymaps.Map('map', {
+		center: [ 59.939275, 30.329199 ],
+		zoom: 16
+	});
+
+	var myPlacemark = new ymaps.Placemark(
+		[ 59.938635, 30.323118 ],
+		{
+			hintContent: 'Мы здесь!',
+			balloonContentHeader: '<img src="img/map-logo.svg" width="154" height="64" alt= "Gllacy Shop"'
+		},
+		{
+			iconLayout: 'default#image',
+			iconImageHref: 'img/map-pin.svg',
+			iconImageSize: [ 80, 140 ],
+			iconImageOffset: [ -40, -140 ]
+		}
+	);
+
+	myMap.geoObjects.add(myPlacemark);
+	myMap.behaviors.disable('scrollZoom');
+}

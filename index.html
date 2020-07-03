@@ -51,7 +51,7 @@
           </div>
 
           <ul class="header-user__list list-reset">
-            <li class="header-user__item"><a class="header-user__link header-user__link--login" href="#"
+            <li class="header-user__item"><a class="header-user__link header-user__link--login" href="login.html"
                 aria-label="Войти в свой аккаунт" aria-haspopup="true">
                 <svg class="header-user__svg header-user__svg--login" width="20" height="19"
                   xmlns="http://www.w3.org/2000/svg">
@@ -90,14 +90,14 @@
                   d="M7.034 20a2.008 2.008 0 002.015-2c0-1.105-.902-2-2.015-2a2.008 2.008 0 00-2.016 2c0 1.105.903 2 2.016 2zM16.103 20a2.008 2.008 0 002.015-2c0-1.105-.902-2-2.015-2a2.008 2.008 0 00-2.016 2c0 1.105.903 2 2.016 2zM5.703 2l-.241-2H0v2h3.668l1.511 13h14.108L21 2H5.703zm11.8 11H6.973L5.965 4h12.727l-1.189 9z" />
                 <path class="cart__svg--fill" d="M5.935 4.03L6.973 13h10.53l1.19-8.97H5.934z" />
               </svg>
-              <output class="cart__status">Пусто</output></a>
+              <output class="cart__status" aria-label="Пусто">Пусто</output></a>
           </div>
         </div>
       </div>
 
       <div class="header-info">
         <p class="header-info__hours">с 10 до 20, ежедневно</p>
-        <p class="header-info__contacts"><a href="tel:+88124502525">8 812 450-25-25</a></p>
+        <p class="header-info__contacts" aria-label="Наш телефон"><a href="tel:+88124502525">8 812 450-25-25</a></p>
       </div>
     </div>
   </header>
@@ -106,9 +106,9 @@
     <h1 class="visually-hidden">Интернет-магазин мороженого "Gllacy"</h1>
 
     <section class="slider">
-      <div class="container">
-        <h2 class="visually-hidden">Популярные начинки</h2>
+      <h2 class="visually-hidden">Популярные начинки</h2>
 
+      <div class="container">
         <div class="slider__controls">
           <button class="slider__controls-btn slider__controls-btn--active" type="button"
             aria-label="Перейти на слайд с Крем-брюле"></button>
@@ -151,9 +151,9 @@
     </section>
 
     <section class="promo">
-      <div class="container">
-        <h2 class="visually-hidden">Промоакции</h2>
+      <h2 class="visually-hidden">Промоакции</h2>
 
+      <div class="container">
         <section class="promo__item promo__item--raspberry">
           <h3 class="promo__title">Малинка даром!</h3>
           <p class="promo__txt">
@@ -175,9 +175,9 @@
     </section>
 
     <section class="hits">
-      <div class="container">
-        <h2 class="visually-hidden">Хиты продаж</h2>
+      <h2 class="visually-hidden">Хиты продаж</h2>
 
+      <div class="container">
         <ul class="hits__list list-reset">
           <li class="hits__item hits__item--hit">
             <div class="hits__item-wrapper">
@@ -250,9 +250,9 @@
     </section>
 
     <section class="strengths">
-      <div class="container">
-        <h2 class="visually-hidden">Преимущества</h2>
+      <h2 class="visually-hidden">Преимущества</h2>
 
+      <div class="container">
         <div class="strengths__wrapper">
           <p class="strengths__txt">
             Магазин Глэйси&nbsp;&ndash; это онлайн и&nbsp;офлайн-магазин по&nbsp;продаже мороженого собственного
@@ -291,15 +291,15 @@
 
         <article class="blog">
           <p class="blog__txt">Новое в нашем блоге</p>
-          <a class="blog__link" href="#" target="_blank" aria-label="Перейти на страницу с блогом">
+          <a class="blog__link" href="#" target="_blank">
             <h2 class="blog__title">10&nbsp;способов сервировки фруктовых щербетов к&nbsp;столу</h2>
           </a>
         </article>
 
         <section class="newsletter">
-          <div class="newsletter__wrapper">
-            <h2 class="visually-hidden">Подписка</h2>
+          <h2 class="visually-hidden">Подписка</h2>
 
+          <div class="newsletter__wrapper">
             <p class="newsletter__txt">
               Подпишитесь на&nbsp;нашу сладкую рассылку и&nbsp;будьте всегда в&nbsp;курсе всего
               самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать
@@ -319,9 +319,10 @@
     </div>
 
     <section class="contacts">
-      <div class="container">
-        <h2 class="visually-hidden">Контактная информация</h2>
+      <h2 class="visually-hidden">Контактная информация</h2>
 
+      <div id="map" class="contacts__map"></div>
+      <div class="container">
         <div class="contacts__map-wrapper">
           <img src="img/map.png" width="1200" height="430" alt="ул. Большая Конюшенная, 19/8" />
         </div>
@@ -349,7 +350,7 @@
               class="visually-hidden">Facebook</span></a>
         </li>
         <li class="social__item"><a class="social__link social__link--vk" href="#"><span
-              class="visually-hidden">Vk</span></a></li>
+              class="visually-hidden">Vkontakte</span></a></li>
         <li class="social__item"><a class="social__link social__link--insta" href="#"><span
               class="visually-hidden">Instagram</span></a></li>
         <li class="social__item"><a class="social__link social__link--twitter" href="#"><span
@@ -372,7 +373,8 @@
 
         <p class="copyright__txt">
           Сделано в
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
+            aria-label="Перейти на сайт 'HTML Academy'">
             HTML Academy
           </a>
           © 2019
@@ -411,6 +413,8 @@
     </form>
   </section>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3559c127-c4b1-4380-af63-6fa53d40641a"
+    type="text/javascript"></script>
   <script src="js/script.js"></script>
 </body>
 

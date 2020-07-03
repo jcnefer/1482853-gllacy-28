@@ -52,7 +52,7 @@
           </div>
 
           <ul class="header-user__list list-reset">
-            <li class="header-user__item"><a class="header-user__link header-user__link--login" href="#"
+            <li class="header-user__item"><a class="header-user__link header-user__link--login" href="login.html"
                 aria-label="Войти в свой аккаунт" aria-haspopup="true">
                 <svg class="header-user__svg header-user__svg--login" width="20" height="19"
                   xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
           </ul>
 
           <div class="cart">
-            <a class="header-user__link cart__info cart__info--full" href="#" aria-haspopup="true"><span
+            <a class="header-user__link cart__info cart__info--full" href="cart.html" aria-haspopup="true"><span
                 class="visually-hidden">Корзина:
               </span>
               <svg class="header-user__svg cart__svg" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -147,7 +147,7 @@
 
       <div class="header-info">
         <p class="header-info__hours">с 10 до 20, ежедневно</p>
-        <p class="header-info__contacts"><a href="tel:+88124502525">8 812 450-25-25</a></p>
+        <p class="header-info__contacts" aria-label="Наш телефон"><a href="tel:+88124502525">8 812 450-25-25</a></p>
       </div>
     </div>
   </header>
@@ -165,9 +165,9 @@
     </div>
 
     <section class="filter">
-      <div class="container">
-        <h2 class="visually-hidden">Фильтр</h2>
+      <h2 class="visually-hidden">Фильтр</h2>
 
+      <div class="container">
         <form class="filter__form" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset class="filter__sort">
             <legend class="filter__name">Сортировка:</legend>
@@ -264,9 +264,9 @@
     </section>
 
     <section class="products">
-      <div class="container">
-        <h2 class="visually-hidden">Вкусы мороженого</h2>
+      <h2 class="visually-hidden">Вкусы мороженого</h2>
 
+      <div class="container">
         <ul class="products__list list-reset">
           <li class="products__item">
             <div class="products__item-wrapper">
@@ -512,7 +512,7 @@
               class="visually-hidden">Facebook</span></a>
         </li>
         <li class="social__item"><a class="social__link social__link--vk" href="#"><span
-              class="visually-hidden">Vk</span></a></li>
+              class="visually-hidden">Vkontakte</span></a></li>
         <li class="social__item"><a class="social__link social__link--insta" href="#"><span
               class="visually-hidden">Instagram</span></a></li>
         <li class="social__item"><a class="social__link social__link--twitter" href="#"><span
@@ -535,7 +535,8 @@
 
         <p class="copyright__txt">
           Сделано в
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
+            aria-label="Перейти на сайт 'HTML Academy'">
             HTML Academy
           </a>
           © 2019

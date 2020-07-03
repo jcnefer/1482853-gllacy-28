@@ -234,7 +234,7 @@ html {
 	outline: none;
 }
 
-.nav__item:active {
+.nav__link:active {
 	background-color: var(--basic-almost-white);
 	box-shadow: inset 0px 2px 1px var(--basic-grey);
 }
@@ -416,8 +416,6 @@ html {
 	padding-bottom: 13px;
 	padding-left: 13px;
 }
-
-/* не уверена есть ли другой способ чтоб инпуты не прыгали */
 
 .header-user input:hover {
 	border: 2px solid var(--basic-grey-extra-light);
@@ -744,9 +742,13 @@ html {
 	margin-bottom: 40px;
 }
 
+.slider .container {
+	position: relative;
+}
+
 .slider__controls {
 	position: absolute;
-	top: 563px;
+	top: calc(50% + 197px);
 }
 
 .slider__controls-btn {
@@ -760,13 +762,19 @@ html {
 	border: 2px solid var(--basic-white);
 	border-radius: 50%;
 	padding: 0;
-	margin-right: 4px;
+	margin-right: 5px;
 
+	outline: none;
 	cursor: pointer;
 }
 
 .slider__controls-btn.slider__controls-btn--active {
 	background-color: var(--basic-white);
+}
+
+.slider__controls-btn:not(.slider__controls-btn--active):hover,
+.slider__controls-btn:not(.slider__controls-btn--active):focus {
+	opacity: 0.7;
 }
 
 .slider__item {
@@ -787,8 +795,8 @@ html {
 
 .slider__img-wrapper {
 	position: absolute;
-	top: 0;
-	left: 50%;
+	top: -124px;
+	left: 600px;
 	transform: translateX(-50%);
 	z-index: -1;
 
@@ -1263,12 +1271,21 @@ html {
 
 .contacts {
 	color: var(--basic-almost-black);
+	position: relative;
 	margin-bottom: 18px;
 }
 
 .contacts .container {
 	position: relative;
 	padding: 0;
+}
+
+.contacts__map {
+	position: absolute;
+	z-index: 1;
+
+	width: 100%;
+	height: 430px;
 }
 
 .contacts__map-wrapper {
@@ -1286,6 +1303,7 @@ html {
 	position: absolute;
 	top: 62px;
 	right: 27px;
+	z-index: 2;
 
 	width: 303px;
 	border-radius: 16px;
@@ -2016,7 +2034,6 @@ html {
 	flex-direction: column;
 }
 
-/* :focus-within не работает */
 .products__item:hover .products__btn-wrapper,
 .products__item:focus-within .products__btn-wrapper {
 	display: flex;
