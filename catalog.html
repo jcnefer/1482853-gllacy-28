@@ -62,8 +62,8 @@
                 <span>Вход</span></a>
               <form class="signin" action="https://echo.htmlacademy.ru" method="POST">
                 <p>
-                  <label class="visually-hidden" for="email-field">E-mail</label>
-                  <input class="signin__input" type="email" name="email" id="email-field"
+                  <label class="visually-hidden" for="signin-email">E-mail</label>
+                  <input class="signin__input" type="email" name="email" id="signin-email"
                     placeholder="email@example.com">
                 </p>
                 <p>
@@ -173,6 +173,7 @@
             <legend class="filter__name">Сортировка:</legend>
 
             <div class="filter__select-wrapper">
+              <label class="visually-hidden" for="sort-field">Сортировать:</label>
               <select class="filter__select" name="sort" id="sort-field">
                 <option class="filter__option" value="by-popularity">по популярности</option>
                 <option class="filter__option" value="first-lower">сначала недорогие</option>
