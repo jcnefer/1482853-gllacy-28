@@ -172,15 +172,14 @@
           <fieldset class="filter__sort">
             <legend class="filter__name">Сортировка:</legend>
 
-            <select class="filter__select" name="sort" id="sort-field">
-              <option class="filter__option" value="by-popularity">по популярности</option>
-              <option class="filter__option" value="first-lower">сначала недорогие</option>
-              <option class="filter__option" value="firt-higher">сначала дорогие</option>
-              <option class="filter__option" value="by-fat-amount">по жирности</option>
-            </select>
-            <svg class="filter__sort-svg" width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 10L0 0H11" />
-            </svg>
+            <div class="filter__select-wrapper">
+              <select class="filter__select" name="sort" id="sort-field">
+                <option class="filter__option" value="by-popularity">по популярности</option>
+                <option class="filter__option" value="first-lower">сначала недорогие</option>
+                <option class="filter__option" value="firt-higher">сначала дорогие</option>
+                <option class="filter__option" value="by-fat-amount">по жирности</option>
+              </select>
+            </div>
           </fieldset>
 
           <fieldset class="filter__price">
