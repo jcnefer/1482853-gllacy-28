@@ -183,6 +183,7 @@ html {
 	align-content: start;
 
 	min-height: 100%;
+	transition: 0.5s;
 }
 
 /* Index */
